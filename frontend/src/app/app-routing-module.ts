@@ -7,10 +7,10 @@ import { TaskList } from './tasks/task-list/task-list';
 
 const routes: Routes = [
   { path: '', redirectTo: 'tasks', pathMatch: 'full' },
-  { path: 'tasks', component: TaskList },
-  { path: 'tasks/add', component: TaskAdd },
-  { path: 'tasks/edit/:id', component: TaskEdit },
-  { path: 'tasks/view/:id', component: TaskView },
+  { path: 'tasks', component: TaskList },  // task list
+  { path: 'tasks/add', component: TaskAdd },  // add task
+  { path: 'tasks/edit/:id', component: TaskEdit },  // edit task 
+  { path: 'tasks/view/:id', component: TaskView },   // view task
 ];
 
 

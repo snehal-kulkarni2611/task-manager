@@ -33,7 +33,7 @@ export class TaskEdit implements OnInit {
   }
 
   ngOnInit(): void {
-    this.taskId = this.route.snapshot.paramMap.get('id')!;
+    this.taskId = this.route.snapshot.paramMap.get('id')!;  // get task from routeParams
     this.taskService.getTasks().subscribe((tasks:any) => {
       const task = tasks.find((t:any) => t.id === this.taskId);
       if (task) {

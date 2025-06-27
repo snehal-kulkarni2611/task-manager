@@ -26,7 +26,7 @@ export class TaskList implements OnInit {
   constructor(private taskService: TaskService, private router: Router) {}
 
   ngOnInit(): void {
-    console.log("completed")
+    console.log("Load Task")
     this.loadTasks();
   }
 
@@ -37,14 +37,17 @@ export class TaskList implements OnInit {
     });
   }
 
+  //edit Task
   editTask(id: string) {
     this.router.navigate(['/tasks/edit', id]);
   }
 
+  // View task
   viewTask(id: string) {
     this.router.navigate(['/tasks/view', id]);
   }
 
+  // delete Task
   deleteTask(id: string) {
     if (confirm('Are you sure you want to delete this task?')) {
       this.taskService.deleteTask(id).subscribe(() => this.loadTasks());

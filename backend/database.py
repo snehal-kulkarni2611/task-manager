@@ -3,7 +3,7 @@ from models import Task
 from uuid import uuid4
 from datetime import datetime
 
-# Simulate in-memory DB
+# Simulation in memory
 db: Dict[str, Task] = {}
 
 def create_task(title: str, description: str, status: str) -> Task:
